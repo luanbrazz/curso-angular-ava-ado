@@ -14,13 +14,14 @@ registerLocaleData(localePt);
 import { AppComponent } from './app.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
-import { rootRouterConfig } from './app.routes.';
 import { DataBindingComponent } from './dem/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './dem/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+
+import { AppRoutingModule } from './app.routes.';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     ReactiveFormsModule,
     HttpClientModule,
     // CustomFormsModule,
-    [RouterModule.forRoot(rootRouterConfig, { useHash: false })],
+    AppRoutingModule,
   ],
   providers: [
     ProdutoService,
