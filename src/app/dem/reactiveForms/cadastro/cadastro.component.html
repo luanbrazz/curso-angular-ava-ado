@@ -6,8 +6,8 @@
 
     <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
         <div class="form-horizontal">
-
-            <div class="form-group" *ngFor="let erro of mensagens.nome">
+            <!-- *ngFor="let erro of mensagens.nome" -->
+            <div class="form-group">
                 <label class="col-md-2 control-label">Nome Completo</label>
                 <div class="col-md-10">
                     <input class="form-control"

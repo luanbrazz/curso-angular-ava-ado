@@ -12,9 +12,6 @@ registerLocaleData(localePt);
 // import { CustomFormsModule } from 'ng2-validation';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './navegacao/menu/menu.component';
-import { HomeComponent } from './navegacao/home/home.component';
-import { FooterComponent } from './navegacao/footer/footer.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig } from './app.routes.';
@@ -23,14 +20,12 @@ import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './dem/reactiveForms/cadastro/cadastro.component';
+import { NavegacaoModule } from './navegacao/navegacao.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    HomeComponent,
-    FooterComponent,
     ContatoComponent,
     SobreComponent,
     DataBindingComponent,
@@ -39,6 +34,7 @@ import { CadastroComponent } from './dem/reactiveForms/cadastro/cadastro.compone
 
   ],
   imports: [
+    NavegacaoModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
