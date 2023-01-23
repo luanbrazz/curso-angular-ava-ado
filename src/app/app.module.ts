@@ -17,8 +17,6 @@ import { CadastroComponent } from './dem/reactiveForms/cadastro/cadastro.compone
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
-import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
-import { ProdutoService } from './produtos/produtos.service';
 
 import { AppRoutingModule } from './app.routes.';
 
@@ -29,7 +27,6 @@ import { AppRoutingModule } from './app.routes.';
     ContatoComponent,
     SobreComponent,
     DataBindingComponent,
-    ListaProdutosComponent,
     CadastroComponent,
 
 
@@ -44,7 +41,6 @@ import { AppRoutingModule } from './app.routes.';
     AppRoutingModule,
   ],
   providers: [
-    ProdutoService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
