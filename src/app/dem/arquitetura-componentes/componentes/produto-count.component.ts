@@ -4,8 +4,6 @@ import { Produto } from '../models/produto';
 @Component({
   selector: 'produto-count',
   templateUrl: './produto-count.component.html'
-
-
 })
 export class ProdutoCountComponent {
   @Input()
