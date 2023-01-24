@@ -10,13 +10,17 @@ registerLocaleData(localePt);
 
 import { ProdutoDetalheComponent } from "./componentes/produto-card-detalhe.component";
 import { ProdutoCountComponent } from "./componentes/produto-count.component";
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { ProdutoAppComponent } from "./produto.app.component";
 
 
 @NgModule({
     declarations: [
+        ProdutoAppComponent,
         ProdutosDashboardComponent,
         ProdutoDetalheComponent,
         ProdutoCountComponent,
+        EditarProdutoComponent,
     ],
     exports: [],
     imports: [
