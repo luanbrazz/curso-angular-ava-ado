@@ -23,8 +23,8 @@ const rootRouterConfig: Routes = [
 ];
 
 @NgModule({
-  imports:[
-    RouterModule.forRoot(rootRouterConfig)
+  imports:[                                 //{enableTracing: true} não usar em prod
+    RouterModule.forRoot(rootRouterConfig, {enableTracing: false})
   ],
   exports:[
     RouterModule,
