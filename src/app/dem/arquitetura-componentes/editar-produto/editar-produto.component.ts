@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../models/produto';
 import { ProdutoService } from '../services/produto.service';
 
@@ -14,7 +14,8 @@ export class EditarProdutoComponent implements OnInit {
   constructor(
     // pega a rota da rota ativa
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -24,7 +25,10 @@ export class EditarProdutoComponent implements OnInit {
   }
 
   salvar(){
+    // fazer comunic com back end
 
+    this.router.navigate(['/produtos']);
+    // this.router.navigateByUrl('/produtos');
   }
 
 }
