@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { DataBindingComponent } from "./dem/data-binding/data-binding.component";
+import { FilmesComponent } from "./dem/pipes/filmes/filmes.component";
 import { CadastroComponent } from "./dem/reactiveForms/cadastro/cadastro.component";
 import { SobreComponent } from "./institucional/sobre/sobre.component";
 import { HomeComponent } from "./navegacao/home/home.component";
@@ -14,7 +15,9 @@ const rootRouterConfig: Routes = [
     // {path: 'contato', component: ContatoComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'feature-data-binding', component: DataBindingComponent },
-    { path: 'cadastro', component: CadastroComponent} ,
+    { path: 'cadastro', component: CadastroComponent, canDeactivate: []} ,
+
+    { path: 'filmes', component: FilmesComponent },
 
     {
       path: 'produtos',

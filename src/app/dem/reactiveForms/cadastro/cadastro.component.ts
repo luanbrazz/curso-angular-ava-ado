@@ -17,6 +17,9 @@ export class CadastroComponent implements OnInit {
   usuario !: Usuario;
   formResult: string = '';
 
+  // sair preenchim de cadastro?
+  mudancaNaoSalvas: boolean;
+
   mensagens = {
     nome: [
       { tipo: 'required', mensagem: 'O campo Nome é obrigatório.' },
