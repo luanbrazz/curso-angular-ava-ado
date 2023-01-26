@@ -21,6 +21,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes.';
 import { AuthGuard } from './services/app.guard';
 import { FilmesComponent } from './dem/pipes/filmes/filmes.component';
+import { FileSizePipe } from './dem/pipes/filmes/filesize.pipe';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { FilmesComponent } from './dem/pipes/filmes/filmes.component';
     DataBindingComponent,
     CadastroComponent,
     FilmesComponent,
-
+    FileSizePipe
 
   ],
   imports: [
