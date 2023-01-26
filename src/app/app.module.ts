@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app.routes.';
 import { AuthGuard } from './services/app.guard';
 import { FilmesComponent } from './dem/pipes/filmes/filmes.component';
 import { FileSizePipe } from './dem/pipes/filmes/filesize.pipe';
+import { ImageFormaterPipe } from './dem/pipes/filmes/image.pipe';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FileSizePipe } from './dem/pipes/filmes/filesize.pipe';
     DataBindingComponent,
     CadastroComponent,
     FilmesComponent,
-    FileSizePipe
+    FileSizePipe,
+    ImageFormaterPipe
 
   ],
   imports: [
