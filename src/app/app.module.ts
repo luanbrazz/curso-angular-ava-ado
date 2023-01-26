@@ -19,6 +19,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 
 import { AppRoutingModule } from './app.routes.';
+import { AuthGuard } from './services/app.guard';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AppRoutingModule } from './app.routes.';
   ],
   providers: [
     // {provide: APP_BASE_HREF, useValue: '/'}
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

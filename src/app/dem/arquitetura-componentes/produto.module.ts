@@ -1,7 +1,7 @@
-import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { ProdutosDashboardComponent } from "./produtos-dashboard/produtos-dashboard.component";
+import { NgModule } from "@angular/core";
 import { ProdutoRoutingModule } from "./produto.route";
+import { ProdutosDashboardComponent } from "./produtos-dashboard/produtos-dashboard.component";
 
 //ajuste pipe de moeda
 import { registerLocaleData } from '@angular/common';
