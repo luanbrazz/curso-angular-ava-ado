@@ -1,5 +1,5 @@
 // import { APP_BASE_HREF } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,10 +19,16 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 
 import { AppRoutingModule } from './app.routes.';
-import { AuthGuard } from './services/app.guard';
-import { FilmesComponent } from './dem/pipes/filmes/filmes.component';
 import { FileSizePipe } from './dem/pipes/filmes/filesize.pipe';
+import { FilmesComponent } from './dem/pipes/filmes/filmes.component';
 import { ImageFormaterPipe } from './dem/pipes/filmes/image.pipe';
+import { AuthGuard } from './services/app.guard';
+import { BarDiZonesModule } from './dem/bar-di-zones/bar.module';
+import { BarService } from './dem/bar-di-zones/bar.service';
+
+export const BAR_PROVIDERS: Provider[] = [
+  BarService
+]
 
 
 @NgModule({
@@ -34,7 +40,7 @@ import { ImageFormaterPipe } from './dem/pipes/filmes/image.pipe';
     CadastroComponent,
     FilmesComponent,
     FileSizePipe,
-    ImageFormaterPipe
+    ImageFormaterPipe,
 
   ],
   imports: [
@@ -45,10 +51,13 @@ import { ImageFormaterPipe } from './dem/pipes/filmes/image.pipe';
     HttpClientModule,
     // CustomFormsModule,
     AppRoutingModule,
+    BarDiZonesModule
   ],
   providers: [
     // {provide: APP_BASE_HREF, useValue: '/'}
-    AuthGuard
+    AuthGuard,
+    // BarService
+   //BAR_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

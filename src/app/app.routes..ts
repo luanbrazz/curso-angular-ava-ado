@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { BarDiZonesComponent } from "./dem/bar-di-zones/bar-di-zones.component";
 import { DataBindingComponent } from "./dem/data-binding/data-binding.component";
 import { FilmesComponent } from "./dem/pipes/filmes/filmes.component";
 import { CadastroComponent } from "./dem/reactiveForms/cadastro/cadastro.component";
@@ -19,11 +20,13 @@ const rootRouterConfig: Routes = [
 
     { path: 'filmes', component: FilmesComponent },
 
+    { path: 'bar', component: BarDiZonesComponent },
+
     {
       path: 'produtos',
       loadChildren: () => import('./dem/arquitetura-componentes/produto.module')
           .then(m => m.ProdutoModule)
-  },
+    },
 
 
     { path: 'admin',
